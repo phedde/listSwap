@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="listswap.css" />
+<title>Untitled Document</title>
+<style>
+.container {
+	margin:0 auto;
+	max-width:960px;	
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>jQuery ListSwap</h1>
+    <hr />
+	<form method="post">
+    		<select id="source_2">
+                <option value="option_1">Option 1</option>
+                <option value="option_2">Why not option 2</option>
+                <option value="option_3">Here's another very very very long option 3 with no truncate</option>
+                <option value="option_4">What about option 4</option>
+                <option value="option_5">I'll go with option 5</option>
+                <option value="option_6">Let's stick to option 6</option>
+            </select>
+            <select id="destination_2">
+            </select>
+            
+            <select id="source_4" data-search="Search for options">
+                <option value="option_1">Option 1</option>
+                <option value="option_2">Why not option 2</option>
+                <option value="option_3">Here's another option 3</option>
+                <option value="option_4">What about option 4</option>
+                <option value="option_5">I'll go with option 5</option>
+                <option value="option_6">Let's stick to option 6</option>
+            </select>
+            <select id="destination_4"  data-search="Search for options">
+            </select>
+            
+            <select id="source" data-text="Source list" data-search="Search for options">
+                <option value="option_1">Option 1</option>
+                <option value="option_2">Why not option 2</option>
+                <option value="option_3">Here's another option 3</option>
+                <option value="option_4">What about option 4</option>
+                <option value="option_5">I'll go with option 5</option>
+                <option value="option_6">Let's stick to option 6</option>
+            </select>
+            <select id="destination" data-text="Destination list"  data-search="Search for options">
+            </select>
+            
+            <select id="source_ar" data-text="القائمة الأولى" data-search="البحث">
+                <option value="option_1">بول ووكر ترك ثروة تقدر بـ25 مليون دولار لابنته فقط</option>
+                <option value="option_2">سمى ووكر، في الوصية والده منفذاً لما يرد فيها</option>
+                <option value="option_3">وتقدم والد ووكر، بطلب لدى المحكمة لتنفيذ الوصية</option>
+                <option value="option_4">وكان ووكر وصديقه، روجر روداس، توفيا في حادثة سير بسانتا كلاريتا في كاليفورنيا</option>
+                <option value="option_5">وأظهرت نتيجة تشريح جثة واكر، انه توفي متأثراً بإصاباته</option>
+                <option value="option_6">يشار إلى أن ووكر كان في الـ40 من العمر، وصديقه في الـ38</option>
+            </select>
+            <select id="destination_ar" data-text="القائمة الثانية"  data-search="البحث">
+            </select>
+
+            <select id="source_3" data-text="Source list">
+                <option value="option_1">Option 1</option>
+                <option value="option_2">Why not option 2</option>
+                <option value="option_3">Here's another very very very long option 3 with no truncate</option>
+                <option value="option_4">What about option 4</option>
+                <option value="option_5">I'll go with option 5</option>
+                <option value="option_6">Let's stick to option 6</option>
+            </select>
+            <select id="destination_3" data-text="Destination list">
+            </select>
+    </form>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.listswap.js"></script>
+<script>
+$('#source, #destination').listswap({
+	truncate:true, 
+	height:135, 
+	is_scroll:true, 
+});
+
+$('#source_2, #destination_2').listswap({
+	truncate:true, 
+	height:162,
+	label_add:'', 
+	label_remove:'', 
+});
+
+$('#source_3, #destination_3').listswap({
+	truncate:true, 
+	height:162,
+});
+
+$('#source_4, #destination_4').listswap({
+	truncate:true, 
+	height:162,
+});
+
+$('#source_ar, #destination_ar').listswap({
+	truncate:true, 
+	height:162, 
+	label_add:'زيادة', 
+	label_remove:'تنقيص', 
+	add_class:'list_ar', 
+	rtl:true,
+});
+</script>
+</body>
+</html>

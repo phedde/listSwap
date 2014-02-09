@@ -1,0 +1,289 @@
+.listboxswap {
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-size:14px;
+	color:#333333;
+}
+
+.listboxswap {
+    margin: 0 0 20px;
+}
+
+.listboxswap .source_wrapper,
+.listboxswap .listbox_controls,
+.listboxswap .destination_wrapper {
+	float:left;
+}
+
+.listboxswap .source_wrapper,
+.listboxswap .destination_wrapper {
+	width:40%;
+	overflow:hidden;
+}
+
+.listboxswap .source_wrapper ul li.odd,
+.listboxswap .destination_wrapper ul li.odd {
+	background:#E9F4FF;
+}
+
+.listboxswap .listbox_controls {
+	width: 12%;
+    margin: 3.5% 4% 0;
+}
+
+.listboxswap .listbox_search {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px 1px 0;
+	padding: 5px 10px;
+	color:#999999;
+	position:relative;
+}
+
+.listboxswap .listbox_search input {
+    width: 100%;
+	color:#999999;
+	border:none;
+	font-size: 12px;
+}
+
+.listboxswap .listbox_search span.clear:before {
+	content:"\00d7";
+}
+
+.listboxswap .listbox_search span.clear {
+    display: block;
+    margin: 4px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+	cursor:pointer;
+	color:#CCCCCC;
+}
+
+.listboxswap .source_wrapper ul,
+.listboxswap .destination_wrapper ul {
+    margin:0;
+	padding:0;
+	list-style:none;
+	border-color: #CCCCCC;
+    border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+	overflow:hidden;
+}
+
+.listboxswap ul.listbox_round_class {
+	border-radius: 5px;
+}
+
+.listboxswap .listbox_search.listbox_round_class {
+	border-radius: 5px 5px 0 0;
+}
+
+.listboxswap .listbox_option {
+	cursor: pointer;
+	width:100%;
+}
+
+.listboxswap .listbox_option span {
+    padding: 5px 10px;
+	display:block;
+}
+
+.listboxswap ul li.listbox_option:hover {
+    background:#CCCCCC;
+}
+
+.listboxswap ul li.listbox_option.selected {
+    background:#CCCCCC;
+}
+
+.listboxswap .listbox_controls ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.listboxswap .listbox_controls ul li {
+    background: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+    text-align: center;
+	overflow:hidden;
+	border-radius: 50px;
+	box-shadow: 0px 10px 5px -10px #CCCCCC;
+	color: #333333;
+}
+
+.listboxswap .listbox_controls ul li:hover {
+    background: #CCCCCC;
+    border: 1px solid #CCCCCC;
+}
+
+.listboxswap .source_wrapper p,
+.listboxswap .destination_wrapper p {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 5px 10px;
+	background:#999999;
+	border-bottom: 1px solid #999999;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.listboxswap .listbox_clear {
+	clear:both;	
+}
+
+.listboxswap .truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listboxswap .listbox_controls .add span.label:after {
+	content: "\00a0\2192";
+}
+
+.listboxswap .listbox_controls .remove span.label:before {
+	content: "\2190\00a0";
+}
+
+@media all and (max-width: 750px) {
+	.listboxswap .listbox_controls .add span.label,
+	.listboxswap .listbox_controls .remove span.label {
+		display:none;
+		visibility:hidden;
+	}
+	
+	.listboxswap .listbox_controls .add span.arrow:before {
+		content: "\2192";
+	}
+	
+	.listboxswap .listbox_controls .remove span.arrow:before {
+		content: "\2190";
+	}
+}
+
+@media all and (max-width: 420px) {
+    .listboxswap .source_wrapper,
+	.listboxswap .listbox_controls,
+	.listboxswap .destination_wrapper {
+		float:none;
+		width:99%;
+		margin:0;
+	}
+	
+	.listboxswap .listbox_controls {
+		margin:5% auto 5% auto;
+		width:40%;
+	}
+	
+	.listboxswap .listbox_controls .add span.arrow:before {
+		content: "";
+	}
+	
+	.listboxswap .listbox_controls .remove span.arrow:before {
+		content: "";
+	}
+	
+	.listboxswap .listbox_controls .add span.label:after {
+	content: "\00a0\2193";
+	}
+	
+	.listboxswap .listbox_controls .remove span.label:before {
+		content: "\2191\00a0";
+	}
+	
+	.listboxswap .listbox_controls .add span.label,
+	.listboxswap .listbox_controls .remove span.label {
+		display:block;
+		visibility:visible;
+	}
+}
+
+
+/* RTL */
+
+.listboxswap.rtl .source_wrapper,
+.listboxswap.rtl .listbox_controls,
+.listboxswap.rtl .destination_wrapper {
+	float:right;
+	text-align:right;
+	direction:rtl;
+}
+
+.listboxswap.rtl .listbox_search span.clear {
+    right: auto;
+	left:0;
+}
+
+.listboxswap.rtl .listbox_search input {
+    text-align:right;
+}
+
+.listboxswap.rtl .listbox_controls .add span.label:after {
+	content: "\00a0\2190";
+}
+
+.listboxswap.rtl .listbox_controls .add span.label:before {
+	content: "";
+}
+
+.listboxswap.rtl .listbox_controls .remove span.label:before {
+	content: "\2192\00a0";
+}
+
+.listboxswap.rtl .listbox_controls .remove span.label:after {
+	content: "";
+}
+
+@media all and (max-width: 750px) {
+	.listboxswap.rtl .listbox_controls .add span.arrow:after {
+		content: "\2190";
+	}
+	
+	.listboxswap.rtl .listbox_controls .add span.arrow:before {
+		content: "";
+	}
+	
+	.listboxswap.rtl .listbox_controls .remove span.arrow:after {
+		content: "\2192";
+	}
+	
+	.listboxswap.rtl .listbox_controls .remove span.arrow:before {
+		content: "";
+	}
+}
+
+@media all and (max-width: 420px) {
+    .listboxswap.rtl .source_wrapper,
+	.listboxswap.rtl .listbox_controls,
+	.listboxswap.rtl .destination_wrapper {
+		float:none;
+		width:99%;
+		margin:0;
+	}
+	
+	.listboxswap.rtl .listbox_controls {
+		margin:5% auto 5% auto;
+		width:40%;
+	}
+	
+	.listboxswap.rtl .listbox_controls .add span.arrow:after {
+		content: "";
+	}
+	
+	.listboxswap.rtl .listbox_controls .remove span.arrow:after {
+		content: "";
+	}
+	
+	.listboxswap.rtl .listbox_controls .add span.label:after {
+	content: "\00a0\2193";
+	}
+	
+	.listboxswap.rtl .listbox_controls .remove span.label:before {
+		content: "\2191\00a0";
+	}
+}
