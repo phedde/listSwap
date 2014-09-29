@@ -19,3 +19,5 @@ Default Options:
 	label_remove : 'Remove', //Set remove label (Can bet set to empty)
 	add_class : null, //Custom class for styling
 	rtl : false, //RTL support
+
+Try it here http://phedde.github.io/listswap
